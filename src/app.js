@@ -15,7 +15,6 @@ class App {
     this.server.use(express.json());
     // eslint-disable-next-line prettier/prettier
     this.server.use(cors({
-        origin: "https://blocodenotasonline.netlify.app/",
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "authorization"],
       })
