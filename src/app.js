@@ -13,6 +13,7 @@ class App {
 
   middlewares() {
     this.server.use(express.json());
+    // Main
     // eslint-disable-next-line prettier/prettier
     this.server.use(cors({
         origin: "https://blocodenotasonline.netlify.app",
