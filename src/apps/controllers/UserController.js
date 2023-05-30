@@ -31,11 +31,15 @@ class UserConbtroller {
   async update(request, response) {
     const { id } = request.params;
 
-    await User.update(request.body, {
-      where: { id },
-    });
+     try {
+        await User.update(request.body, {
+          where: { id },
+        });
 
-    return response.status(200).json({ message: "User was been updated." });
+        return response.status(200).json({ message: "User was been updated." });
+     } catch (error) {
+        response.status(400).json({ error });
+     }
   }
 
   async delete(request, response) {
