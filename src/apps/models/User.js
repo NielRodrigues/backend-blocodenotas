@@ -20,7 +20,7 @@ User.init(
     password: Sequelize.VIRTUAL,
     password_hash: Sequelize.STRING,
     picture: Sequelize.STRING,
-    notes: Sequelize.STRING,
+    notes: Sequelize.TEXT,
   },
   {
     sequelize,
